@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Dashboard</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&family=Sofia+Sans:wght@100;400;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header_top">
+                <div class="search-bar">
+                    <button id="btn-search">
+                        <img src="./resources/icons/search.png" alt="">
+                    </button>
+                    <input type="text" id="txt-search">
+                </div>
+                <div class="profile-top">
+                    <button id="bell"><img src="./resources/icons/bell.png" alt=""></button>
+                    <img src="./resources/images/meliodas.jpg" alt="foto de perfil" id="profile-pic">
+                    <a id="profile-link" href="#">Vitongovisk</a>
+                </div>
+            </div>
+            <div class="header_bottom">
+                <div class="profile-bottom">
+                    <img src="./resources/images/meliodas.jpg" alt="foto de perfil">
+                    <div class="info">
+                        <p id="status">32.500</p>
+                        <p class="nickname">Vitongovisk the dev (@vitongovisk)</p>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button>New</button>
+                    <button>Upload</button>
+                    <button>Share</button>
+                </div>
+            </div>
+        </div>
+        <div class="side-bar">
+            <div class="logo">
+                <img src="./resources/images/logo.png" alt="logo image">
+                <p id="logo_text">Dashboard</p>
+            </div>
+            <div class="options">
+                <button>
+                    <img src="./resources/icons/home.png" alt="home icon">
+                    <p>Home</p>
+                </button>
+                <button>
+                    <img src="./resources/icons/profile.png" alt="profile icon">
+                    <p>Profile</p>
+                </button>
+                <button>
+                    <img src="./resources/icons/message.png" alt="message icon">
+                    <p>Messages</p>
+                </button>
+                <button>
+                    <img src="./resources/icons/history.png" alt="history icon">
+                    <p>History</p>
+                </button>
+                <button>
+                    <img src="./resources/icons/tasks.png" alt="tasks icon">
+                    <p>Tasks</p>
+                </button>
+                <button>
+                    <img src="./resources/icons/community.png" alt="community icon">
+                    <p>Community</p>
+                </button>
+            </div>
+            <div class="more-options">
+                <button>
+                    <img src="./resources/icons/setting.png" alt="settings icon">
+                    <p>Settings</p>
+                </button>
+                <button>
+                    <img src="./resources/icons/support.png" alt="support icon">
+                    <p>Support</p>
+                </button>
+                <button>
+                    <img src="./resources/icons/privacy.png" alt="privacy icon">
+                    <p>Privacy</p>
+                </button>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="projects">
+                <div class="section-title">
+                    <p>Your projects</p>
+                </div>
+                <div class="projects-container">
+                    <script>
+                        const container = document.querySelector(".projects-container");
+                         
+                        for(let i = 0; i < 8; i++){
+                            let div = `\n<div class="project-card">
+                        <div class="content">
+                            <p class="title">Projetinho ${i + 1}</p>
+                            <p class="description">Descriçãozinha do projetinho ${i + 1}</p>
+                            <div class="options">
+                                <button>
+                                    <img src="./resources/icons/favorite.png" alt="">
+                                </button>
+                                <button>
+                                    <img src="./resources/icons/show.png" alt="">
+                                </button>
+                                <button>
+                                    <img src="./resources/icons/share.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>`;
+                            container.innerHTML += div;
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="announcements">
+                    <div class="section-title">Announcements</div>
+                    <div class="announcements-container">
+                        <div class="announcement-card">
+                            <p class="announcement-title">Site Maintanence</p>
+                            <p class="announcement-description"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+                        </div>
+                        <div class="announcement-card">
+                            <p class="announcement-title">Community Share Day</p>
+                            <p class="announcement-description"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+                        </div>
+                        <div class="announcement-card">
+                            <p class="announcement-title">Update Privacy Policy</p>
+                            <p class="announcement-description"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trending">
+                    <div class="section-title">Trending</div>
+                    <div class="trending-container">
+                        <div class="trending-card">
+                            <img src="./resources/images/meliodas.jpg" alt="">
+                            <div class="info">
+                                <p class="link">@VitongoDev</p>
+                                <p class="nickname">Vitongo game developer</p>
+                            </div>
+                        </div>
+                        <div class="trending-card">
+                            <img src="./resources/images/meliodas.jpg" alt="">
+                            <div class="info">
+                                <p class="link">@VitongoDev</p>
+                                <p class="nickname">Vitongo game developer</p>
+                            </div>
+                        </div>
+                        <div class="trending-card">
+                            <img src="./resources/images/meliodas.jpg" alt="">
+                            <div class="info">
+                                <p class="link">@VitongoDev</p>
+                                <p class="nickname">Vitongo game developer</p>
+                            </div>
+                        </div>
+                        <div class="trending-card">
+                            <img src="./resources/images/meliodas.jpg" alt="">
+                            <div class="info">
+                                <p class="link">@VitongoDev</p>
+                                <p class="nickname">Vitongo game developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
